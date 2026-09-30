@@ -28,7 +28,7 @@
             return ""
         </line>
 		<line displayname="§6偷鸡小技巧">
-			{return "\\n"+"§5E§dn§4d§ce§er§aI§bo§3灵§9魂§1瓶§5可§d以§4抓§c偷§e鸡§a打§b龙"}
+			{return "\n"+"§5E§dn§4d§ce§er§aI§bo§3灵§9魂§1瓶§5可§d以§4抓§c偷§e鸡§a打§b龙"}
 		</line>
     </entity>
 	<!--Pam's harvestcraft-->

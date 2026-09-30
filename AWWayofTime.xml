@@ -31,8 +31,8 @@
             return AQUA+standards(nbt['capacity'])
         </line>
 		<line displayname="§b工作进程§f(§bProcess§f)">
-            if (nbt['isActive']==1 && nbt['canBeFilled']==0){return YELLOW+((nbt['progress']/(nbt['liquidRequired']*nbt['Inventory'][0]['Count']))*100).toFixed(1)+AQUA+' %'+'\\n'+AQUA+'===='+YELLOW+standards(nbt['progress'])+GOLD+" / "+AQUA+standards(nbt['liquidRequired']*nbt['Inventory'][0]['Count'])+'===='}
-			if (nbt['isActive']==1 && nbt['canBeFilled']==1){return '\\n'+'\\t'+AQUA+'===='+YELLOW+'正在为宝珠充能'+AQUA+'===='}
+            if (nbt['isActive']==1 && nbt['canBeFilled']==0){return YELLOW+((nbt['progress']/(nbt['liquidRequired']*nbt['Inventory'][0]['Count']))*100).toFixed(1)+AQUA+' %'+'\n'+AQUA+'===='+YELLOW+standards(nbt['progress'])+GOLD+" / "+AQUA+standards(nbt['liquidRequired']*nbt['Inventory'][0]['Count'])+'===='}
+			if (nbt['isActive']==1 && nbt['canBeFilled']==1){return '\n'+'\t'+AQUA+'===='+YELLOW+'正在为宝珠充能'+AQUA+'===='}
         </line>
     </tileentity>
     <tileentity id="containerMasterStone">

@@ -310,9 +310,9 @@
 		<line displayname="§b活化器高度">
 			if(nbt['mID']==32013){return
 			YELLOW+nbt['height']+GOLD+' 层'+
-			"\\n"+"§d最低-mKeV:"+TAB+ALIGNRIGHT+AQUA+standards((nbt['mFloor']/1000000).toFixed(0))+GOLD+' mKeV'+
-			"\\n"+"§d当前-mKeV:"+TAB+ALIGNRIGHT+YELLOW+standards((nbt['mKeV']/1000000).toFixed(0))+GOLD+' mKeV'+
-			"\\n"+"§d最高-mKeV:"+TAB+ALIGNRIGHT+RED+standards((nbt['mCeil']/1000000).toFixed(0))+GOLD+' mKeV'
+			"\n"+"§d最低-mKeV:"+TAB+ALIGNRIGHT+AQUA+standards((nbt['mFloor']/1000000).toFixed(0))+GOLD+' mKeV'+
+			"\n"+"§d当前-mKeV:"+TAB+ALIGNRIGHT+YELLOW+standards((nbt['mKeV']/1000000).toFixed(0))+GOLD+' mKeV'+
+			"\n"+"§d最高-mKeV:"+TAB+ALIGNRIGHT+RED+standards((nbt['mCeil']/1000000).toFixed(0))+GOLD+' mKeV'
 		}
 		</line>
 		<line displayname="§b流体模式">	
@@ -477,13 +477,13 @@
 		<line displayname="§6流体需求">
 			if(nbt['mID']==9412 && nbt['mActive']==1){
 				T7WaterFluidInput = "";
-				T7Water0 = "\\n" + GREEN + "超级冷却液" + TAB + ALIGNRIGHT + AQUA + standards(10000) + YELLOW + "L";
-				T7Water1 = "\\n" + GREEN + "氦" + TAB + ALIGNRIGHT + AQUA + standards(10000) + YELLOW + "L";
-				T7Water3 = "\\n" + GREEN + "氖" + TAB + ALIGNRIGHT + AQUA + standards(7500) + YELLOW + "L";
-				T7Water5 = "\\n" + GREEN + "氪" + TAB + ALIGNRIGHT + AQUA + standards(5000) + YELLOW + "L";
-				T7Water7 = "\\n" + GREEN + "氙" + TAB + ALIGNRIGHT + AQUA + standards(2500) + YELLOW + "L";
-				T7Water2367 = "\\n" + GREEN + "熔融超导粗胚" + TAB + ALIGNRIGHT + AQUA + standards(1440) + YELLOW + "L";
-				T7Water4567 = "\\n" + GREEN + "熔融中子" + TAB + ALIGNRIGHT + AQUA + standards(4608) + YELLOW + "L";
+				T7Water0 = "\n" + GREEN + "超级冷却液" + TAB + ALIGNRIGHT + AQUA + standards(10000) + YELLOW + "L";
+				T7Water1 = "\n" + GREEN + "氦" + TAB + ALIGNRIGHT + AQUA + standards(10000) + YELLOW + "L";
+				T7Water3 = "\n" + GREEN + "氖" + TAB + ALIGNRIGHT + AQUA + standards(7500) + YELLOW + "L";
+				T7Water5 = "\n" + GREEN + "氪" + TAB + ALIGNRIGHT + AQUA + standards(5000) + YELLOW + "L";
+				T7Water7 = "\n" + GREEN + "氙" + TAB + ALIGNRIGHT + AQUA + standards(2500) + YELLOW + "L";
+				T7Water2367 = "\n" + GREEN + "熔融超导粗胚" + TAB + ALIGNRIGHT + AQUA + standards(1440) + YELLOW + "L";
+				T7Water4567 = "\n" + GREEN + "熔融中子" + TAB + ALIGNRIGHT + AQUA + standards(4608) + YELLOW + "L";
 				switch(nbt['controlSignal']){
 					case 0:T7WaterFluidInput += T7Water0;break;
 					case 1:T7WaterFluidInput += T7Water1;break;
@@ -510,7 +510,7 @@
 					}
 				}
 				if(lines.length > 0){
-					return "\\n" + lines.join("\\n");
+					return "\n" + lines.join("\n");
 				}else{
 					return RED + "暂无";
 				}
@@ -563,7 +563,7 @@
 		<line displayname="§6夸克存储">
 			if(nbt['mID']==9414 && nbt['mActive']==1 && nbt['insertedItems'][0] != undefined){
 				if (nbt['insertedItems'][0] != undefined){
-					outputString = "\\n";
+					outputString = "\n";
 					for (i=0; nbt['insertedItems'][i] != undefined; i++)
 					{
 						switch(nbt['insertedItems'][i]['Damage']){
@@ -575,7 +575,7 @@
 							case 32240: outputString += RED + "顶"; break;
 						}
 						if((i+1) % 6 == 0 && nbt['insertedItems'][i+1] != undefined) {
-							outputString += WHITE + " → " + "\\n";
+							outputString += WHITE + " → " + "\n";
 						} else if(nbt['insertedItems'][i+1] != undefined) {
 							outputString += WHITE + " → ";
 						}
@@ -730,21 +730,21 @@
 				switch(nbt['mInternalMode']){
 					case 0:
 						return YELLOW+'模式[A]'
-							+"\\n"+GREEN+"|电路20|"+TAB+ALIGNRIGHT+GREEN+"压缩机"
-							+"\\n"+GREEN+"|电路21|"+TAB+ALIGNRIGHT+GREEN+"车床"
-							+"\\n"+GREEN+"|电路22|"+TAB+ALIGNRIGHT+GREEN+"磁化机";
+							+"\n"+GREEN+"|电路20|"+TAB+ALIGNRIGHT+GREEN+"压缩机"
+							+"\n"+GREEN+"|电路21|"+TAB+ALIGNRIGHT+GREEN+"车床"
+							+"\n"+GREEN+"|电路22|"+TAB+ALIGNRIGHT+GREEN+"磁化机";
 						break;
 					case 1:
 						return YELLOW+'模式[B]'
-							+"\\n"+GREEN+"|电路20|"+TAB+ALIGNRIGHT+GREEN+"发酵槽"
-							+"\\n"+GREEN+"|电路21|"+TAB+ALIGNRIGHT+GREEN+"流体提取机"
-							+"\\n"+GREEN+"|电路22|"+TAB+ALIGNRIGHT+GREEN+"固体提取机";
+							+"\n"+GREEN+"|电路20|"+TAB+ALIGNRIGHT+GREEN+"发酵槽"
+							+"\n"+GREEN+"|电路21|"+TAB+ALIGNRIGHT+GREEN+"流体提取机"
+							+"\n"+GREEN+"|电路22|"+TAB+ALIGNRIGHT+GREEN+"固体提取机";
 						break;
 					case 2:
 						return YELLOW+'模式[C]'
-							+"\\n"+GREEN+"|电路20|"+TAB+ALIGNRIGHT+GREEN+"激光蚀刻机"
-							+"\\n"+GREEN+"|电路21|"+TAB+ALIGNRIGHT+GREEN+"高压釜"
-							+"\\n"+GREEN+"|电路22|"+TAB+ALIGNRIGHT+GREEN+"流体固化机";
+							+"\n"+GREEN+"|电路20|"+TAB+ALIGNRIGHT+GREEN+"激光蚀刻机"
+							+"\n"+GREEN+"|电路21|"+TAB+ALIGNRIGHT+GREEN+"高压釜"
+							+"\n"+GREEN+"|电路22|"+TAB+ALIGNRIGHT+GREEN+"流体固化机";
 						break;
 			}
             if(nbt['mPlasmaMode']==0 && nbt['mID']==862){return YELLOW+'电弧炉'}
@@ -797,19 +797,19 @@
 		<line displayname="§6数据存储-物品">
 			if(nbt['mID']==2710&&nbt['cachedItems']!=undefined)
 			{
-				outputString = "\\n";
+				outputString = "\n";
 				for (i=0;  nbt['cachedItems'][i] != undefined; i++)
 				 {
-					outputString += YELLOW +standards(nbt['cachedItems'][i]['size'])+"个"+GREEN+name(nbt['cachedItems'][i]['itemStack'])+ALIGNRIGHT+"\\n" ;
+					outputString += YELLOW +standards(nbt['cachedItems'][i]['size'])+"个"+GREEN+name(nbt['cachedItems'][i]['itemStack'])+ALIGNRIGHT+"\n" ;
 				}	
 				 return  outputString;
 			}
 		</line>
 		<line displayname="§6数据存储-流体"> 
 			if(nbt['mID']==2713 && nbt['cachedFluids']!=undefined){
-				outputString = "\\n";
+				outputString = "\n";
 			    for(i=0; nbt['cachedFluids'][i]!=undefined; i++) {
-					outputString += AQUA+standards(nbt['cachedFluids'][i]['size'])+YELLOW+"L "+GREEN+  fluidName(nbt['cachedFluids'][i]['fluidStack']['FluidName'])+ALIGNRIGHT+ "\\n" ;
+					outputString += AQUA+standards(nbt['cachedFluids'][i]['size'])+YELLOW+"L "+GREEN+  fluidName(nbt['cachedFluids'][i]['fluidStack']['FluidName'])+ALIGNRIGHT+ "\n" ;
 				};
 				return outputString;
 			};	
@@ -889,13 +889,13 @@
 			Cau = 12.4/Math.pow(10,6)*Math.pow(10,9)*PAeoh*Caceoh();
 			if (nbt['mID']==15410 && nbt['mActive']==0 && AAeoh!=0 && nbt['Inventory'][0]['Count']!=undefined) {
 				return YELLOW+(RMeoh/Cau*100).toFixed(2)+AQUA+" %"+
-				"\\n"+AQUA+"("+YELLOW+standards(RMeoh)+"L"+GOLD+"/"+LPURPLE+standards(Cau)+"L"+AQUA+")"
+				"\n"+AQUA+"("+YELLOW+standards(RMeoh)+"L"+GOLD+"/"+LPURPLE+standards(Cau)+"L"+AQUA+")"
 			}
 		</line>
 		<line displayname="§6氢氦需求">
 			if (nbt['mID']==15410 && nbt['mActive']==0 && AAeoh==0) {
-				return "\\n"+AQUA+"("+YELLOW+standards(nbt['stored.fluid.hydrogen'])+"L"+GOLD+"/"+LPURPLE+Caceoh()+"GL"+AQUA+"氢)"+
-				"\\n"+AQUA+"("+YELLOW+standards(nbt['stored.fluid.helium'])+"L"+GOLD+"/"+LPURPLE+
+				return "\n"+AQUA+"("+YELLOW+standards(nbt['stored.fluid.hydrogen'])+"L"+GOLD+"/"+LPURPLE+Caceoh()+"GL"+AQUA+"氢)"+
+				"\n"+AQUA+"("+YELLOW+standards(nbt['stored.fluid.helium'])+"L"+GOLD+"/"+LPURPLE+
 				Caceoh()+"GL"+AQUA+"氦)"
 			}
 		</line>
@@ -937,7 +937,7 @@
 		<line displayname="§6存量-水:">
 			if (nbt['mID']==19034 && nbt['mActive']==0){
 			return AQUA+standards(nbt['storedWater'])+YELLOW+" L"+
-			"\\n"+"§6存量-岩浆:"+TAB+ALIGNRIGHT+AQUA+standards(nbt['storedLava'])+YELLOW+" L"
+			"\n"+"§6存量-岩浆:"+TAB+ALIGNRIGHT+AQUA+standards(nbt['storedLava'])+YELLOW+" L"
 			}
 		</line>
 
@@ -960,7 +960,7 @@
 
 		<!--XX兰波顿XX -->
 		<line displayname="§dEU无线网同步">
-			if (nbt['wireless_mode_cooldown']>=0 && nbt['wireless_mode']!=0){return YELLOW+((nbt['wireless_mode_cooldown']/6000)*100).toFixed(1)+LPURPLE+" %"+"\\n"+"§d剩余时间"+TAB+ALIGNRIGHT+formatTimes(6000 - nbt['wireless_mode_cooldown'])}
+			if (nbt['wireless_mode_cooldown']>=0 && nbt['wireless_mode']!=0){return YELLOW+((nbt['wireless_mode_cooldown']/6000)*100).toFixed(1)+LPURPLE+" %"+"\n"+"§d剩余时间"+TAB+ALIGNRIGHT+formatTimes(6000 - nbt['wireless_mode_cooldown'])}
 		</line>
 
 		<!--XXDebug&&传送机XX -->
@@ -1187,9 +1187,9 @@
 		<line displayname="§d龙蛋:">
 			if (nbt['mID']==19026){
 			return LPURPLE+nbt['mDragonEggs']+
-			"\\n"+"§a爬行者蛋:"+TAB+ALIGNRIGHT+GREEN+nbt['mCrepperEggs']+
-			"\\n"+"§6§k6§r§6无尽之蛋:§k6§r"+TAB+ALIGNRIGHT+GOLD+nbt['mInfinityEggs']+
-			"\\n"+"§6当前层级:"+TAB+ALIGNRIGHT+GOLD+nbt['mPieces']
+			"\n"+"§a爬行者蛋:"+TAB+ALIGNRIGHT+GREEN+nbt['mCrepperEggs']+
+			"\n"+"§6§k6§r§6无尽之蛋:§k6§r"+TAB+ALIGNRIGHT+GOLD+nbt['mInfinityEggs']+
+			"\n"+"§6当前层级:"+TAB+ALIGNRIGHT+GOLD+nbt['mPieces']
 			}
 		</line>
 
@@ -1226,7 +1226,7 @@
 		</line>
 		<line displayname="§6§k6§b人造恒星发电总额§6§k6">
 			var total = (nbt['currentOutputEU']*nbt['outputMultiplier']*(nbt['rewardContinuous']+100)/100).toFixed(0);
-			if (nbt['mActive']==1 && nbt['mID']==19015){return YELLOW+standards(total/128)+colorcir('MAX',3,1)+'\\n'+YELLOW+standards(total*16777216)+AQUA+' EU/T'}
+			if (nbt['mActive']==1 && nbt['mID']==19015){return YELLOW+standards(total/128)+colorcir('MAX',3,1)+'\n'+YELLOW+standards(total*16777216)+AQUA+' EU/T'}
 		</line>
 		<!--部件装配线 -->
 		<line displayname="§6部件外壳等级">
@@ -1246,13 +1246,13 @@
 				var Hle = ID_996?(Math.floor((16384*nbt['euProduction'])/10000)):Ile;
 				if (nbt['mID']==1171 || nbt['mID']==2105 || nbt['mID']==996 || nbt['mID']==31026) {
 					return GOLD+'('+GetVtier(Hle)+GOLD+')'+
-					"\\n"+(ID_996?"§d预计效率":"§d当前效率")+TAB+ALIGNRIGHT+Efficiency+
-					"\\n"+(ID_996?"§d预计发电":"§d当前发电")+TAB+ALIGNRIGHT+YELLOW+standards(Hle)+GOLD+" EU/t"
+					"\n"+(ID_996?"§d预计效率":"§d当前效率")+TAB+ALIGNRIGHT+Efficiency+
+					"\n"+(ID_996?"§d预计发电":"§d当前发电")+TAB+ALIGNRIGHT+YELLOW+standards(Hle)+GOLD+" EU/t"
 				}
 				if (Arrayofbl(nbt['mID'])==false){
 					return GOLD+'('+GetVtier(nbt['mID']==19026?Tle:nbt['mEUt'])+GOLD+')'+
-					"\\n"+"§d当前效率"+TAB+ALIGNRIGHT+Efficiency+
-					"\\n"+"§d预计发电"+TAB+ALIGNRIGHT+YELLOW+standards(nbt['mID']==19026?Tle:nbt['mEUt'])+GOLD+" EU/t"
+					"\n"+"§d当前效率"+TAB+ALIGNRIGHT+Efficiency+
+					"\n"+"§d预计发电"+TAB+ALIGNRIGHT+YELLOW+standards(nbt['mID']==19026?Tle:nbt['mEUt'])+GOLD+" EU/t"
 				}
 			}
 		</line>
@@ -1383,7 +1383,7 @@
 					}
 				}
 				return YELLOW+b*2+GOLD+' A'+
-						"\\n"+"§d最大输出"+TAB+ALIGNRIGHT+YELLOW+b+GOLD+' A'
+						"\n"+"§d最大输出"+TAB+ALIGNRIGHT+YELLOW+b+GOLD+' A'
 			}
 		</line>
 		<line displayname="§d电池总和">
@@ -1411,7 +1411,7 @@
 				abcd=formatBytes3(""+nbt['stored']);
 				hijk=formatBytes3(""+nbt['capacity']);
 				efg=(abcd/formatBytes3(""+nbt['capacity'])*100).toFixed(5);
-				return GREEN+sci_format(abcd)+GOLD+" EU"+RED+" / "+GOLD+sci_format(hijk)+GOLD+" EU"+"\\n"+"§d存储占比"+TAB+ALIGNRIGHT+YELLOW+efg+AQUA+"%";
+				return GREEN+sci_format(abcd)+GOLD+" EU"+RED+" / "+GOLD+sci_format(hijk)+GOLD+" EU"+"\n"+"§d存储占比"+TAB+ALIGNRIGHT+YELLOW+efg+AQUA+"%";
 			}
 		</line>
 
@@ -1436,7 +1436,7 @@
 					outpu=outpu+GREEN+miao+GREEN+"秒";
 					if(i==0){out =outpu;outpu = "";ccc=bbb;}
 				}
-				fda=aaa+BLUE+"%"+ ALIGNRIGHT+"\\n"+GREEN+"需耗时"+WHITE+out+TAB+ALIGNRIGHT+"§9剩余";
+				fda=aaa+BLUE+"%"+ ALIGNRIGHT+"\n"+GREEN+"需耗时"+WHITE+out+TAB+ALIGNRIGHT+"§9剩余";
 				if((100/3)>aaa)outpu=RED+fda+RED+outpu;
 				else if((100/1.5)>aaa)outpu=YELLOW+fda+YELLOW+outpu;
 				else outpu=GREEN+fda+GREEN+outpu;
@@ -1588,11 +1588,11 @@
 							}
 							else {icount[id_match.indexOf(Idamage)] += nbt[str]['Count'];}}
 					}
-				if (coutile!=0){outputString +=GOLD+"循环"+GREEN+coutile+GOLD+"次" + ALIGNRIGHT+"\\n";
+				if (coutile!=0){outputString +=GOLD+"循环"+GREEN+coutile+GOLD+"次" + ALIGNRIGHT+"\n";
 				for (var i=0;i<iname.length;i++){
 					outputString += YELLOW + standards(icount[i]) + "个" + GREEN + iname[i] +ALIGNRIGHT;
 					if (i!=iname.length-1){
-						outputString +=  "\\n" ;
+						outputString +=  "\n" ;
 					}
 				}
 				return outputString;}
@@ -1602,7 +1602,7 @@
 		<!--机器：液体产物 -->
 		<line displayname="§6流体输出">
 			if(nbt['mOutputFluid']['Amount']!=undefined){
-				return "\\n"+AQUA+standards(nbt['mOutputFluid']['Amount'])+YELLOW+"L "+GREEN+fluidName(nbt['mOutputFluid']['FluidName'])
+				return "\n"+AQUA+standards(nbt['mOutputFluid']['Amount'])+YELLOW+"L "+GREEN+fluidName(nbt['mOutputFluid']['FluidName'])
 			}
 		</line>
 
@@ -1632,11 +1632,11 @@
 							}
 						}
 					}
-				if (coutile!=0){outputString2 +=GOLD+"循环"+GREEN+coutile+GOLD+"次" + ALIGNRIGHT+"\\n";
+				if (coutile!=0){outputString2 +=GOLD+"循环"+GREEN+coutile+GOLD+"次" + ALIGNRIGHT+"\n";
 				for (var i=0;i<fname.length;i++){
 					outputString2 += AQUA + standards(fcount[i]) + YELLOW + "L" + GREEN + fname[i] +ALIGNRIGHT;
 					if (i!=fname.length-1){
-						outputString2 +=  "\\n" ;
+						outputString2 +=  "\n" ;
 					}
 				}
 				return outputString2;}
